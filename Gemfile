@@ -13,4 +13,8 @@ rails = case rails_version
 
 gem 'rails', rails
 
+if rails_version[0] == '3'
+  gem 'test-unit', '~> 3.0'
+end
+
 gemspec
