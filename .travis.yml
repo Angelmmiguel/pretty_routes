@@ -1,5 +1,6 @@
 language: ruby
 rvm:
+  - 1.9.3
   - 2.1.2
   - 2.2.3
   - 2.3.0
@@ -13,4 +14,3 @@ env:
 matrix:
   allow_failures:
     - env: "RAILS_VERSION=master"
-    - rvm: 2.1.2
