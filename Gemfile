@@ -8,7 +8,7 @@ rails = case rails_version
         when 'default'
           '>= 4.2.5'
         else
-          '~> #{rails_version}'
+          "~> #{rails_version}"
         end
 
 gem 'rails', rails
