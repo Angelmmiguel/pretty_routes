@@ -1,32 +1,7 @@
-## 0.2.4
+# Change Log
+All notable changes to this project will be documented in this file.
+This project adheres to [Semantic Versioning](http://semver.org/).
 
-* Sextant works with Rails4, though please use `rails/info/routes` instead.
+## [0.0.1] 10-02-2016
 
-## 0.2.3
-
-* Be explicit about which ApplicationController we're using (Sextant)
-
-## 0.2.2
-
-* Fix JS, explicitly set layout
-
-## 0.2.1
-
-* Render without layout
-
-## 0.2.0
-
-* Render routes as HTML
-* JS now uses asset pipeline
-
-## 0.1.3
-
-* Helper for mounting sextant in cases of catch all routes (via @menkel)
-
-## 0.1.2
-
-* Remove dependency on ApplicationController existance
-
-## 0.0.1
-
-* First Release
+* Launch first version of the gem based on [Sextant 0.2.4](https://github.com/schneems/sextant/tree/master)

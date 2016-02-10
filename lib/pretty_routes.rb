@@ -1,8 +1,9 @@
-require 'sextant/engine'
-require 'rails/routes'
+require 'pretty_routes/engine'
 
-module Sextant
-
+#
+# Base module of pretty routes
+#
+module PrettyRoutes
   begin
     require 'rails/application/route_inspector'
     ROUTE_INSPECTOR = Rails::Application::RouteInspector.new
@@ -21,4 +22,3 @@ module Sextant
     Rails.application.routes.routes
   end
 end
-

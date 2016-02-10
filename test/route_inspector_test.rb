@@ -1,7 +1,7 @@
 require 'test_helper'
 
-class SextantTest < ActiveSupport::TestCase
+class PrettyRoutesTest < ActiveSupport::TestCase
   test "truth" do
-    assert_kind_of Module, ::Sextant
+    assert_kind_of Module, ::PrettyRoutes
   end
 end
