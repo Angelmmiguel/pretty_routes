@@ -1,0 +1,184 @@
+/*
+ * Variables
+ */
+
+// Color variables
+
+// Rows
+$light_gray:   #f2f2f2;
+
+// HTTP verbs
+$blue:         #3788FF;
+$green:        #27B04A;
+$purple:       #B689FF;
+$red:          #E45555;
+
+// Highlight
+$yellow:       #FFFF10;
+$dark_yellow:  #D1D115;
+
+// Others
+$bg:           $light_gray;
+$rails_red:    #cc0000;
+$light_red:    #FFB5B5;
+$gray:         #999999;
+
+/*
+ * General styles
+ */
+
+body {
+  background-color: #FDFDFD;
+  color:            #333333;
+}
+
+body, p, ol, ul, td {
+  font-family:  helvetica, arial, verdana, sans-serif;
+  font-size:    13px;
+  line-height:  18px;
+}
+
+a,
+a:visited {
+  color: #333;
+}
+
+a:hover {
+  background-color: #333;
+  color:            #FFF;
+}
+
+/*
+ * Grid styles
+ */
+
+.wrap {
+  min-width: 960px;
+  width: 75%;
+  margin: 20px auto;
+}
+
+/*
+ * Header styles
+ */
+
+.header {
+  margin: 35px auto 25px;
+
+  h2 {
+    color: $rails_red;
+    font-size: 2.3em;
+  }
+}
+
+/*
+ * Text style
+ */
+
+span.highlight {
+  display: inline-block;
+  background-color: $yellow;
+  border: 1px solid $dark_yellow;
+  border-radius: 2px;
+}
+
+#search-routes {
+  padding: 7px 15px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  border: 1px solid #d1d1d1;
+  min-width: 320px;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $light_red;
+  }
+}
+
+/*
+ * Table styles
+ */
+
+table.route_table {
+  border-spacing:   0;
+  border-collapse:  collapse;
+  width: 100%;
+
+  th {
+    border-bottom: 1px solid #999;
+    padding: 7px 10px;
+    font-size: 1.2em;
+  }
+
+  tbody tr:nth-child(even) {
+    background: $light_gray;
+  }
+
+  tbody tr:nth-child(odd) {
+    background: #FFF;
+  }
+
+  tbody tr:hover {
+    background-color: #d5d5d5;
+  }
+
+  td {
+    padding: 7px 10px;
+  }
+
+  td + td {
+    border-left: 1px solid #DDD;
+  }
+
+  tr.empty {
+    background: white !important;
+    display: none;
+
+    td {
+      padding: 50px 0;
+      text-align: center;
+      font-size: 1.5em;
+      color: $gray;
+    }
+  }
+}
+
+// Verb td
+td.verb {
+  span {
+    display: inline-block;
+    padding: 3px 4px;
+    border-radius: 3px;
+    //border: 1px solid #fff;
+    font-weight: bold;
+  }
+
+  &[data-route-verb="get"] {
+    span {
+      border-color: $green;
+      color: $green;
+    }
+  }
+
+  &[data-route-verb="post"] {
+    span {
+      border-color: $blue;
+      color: $blue;
+    }
+  }
+
+  &[data-route-verb="delete"] {
+    span {
+      border-color: $red;
+      color: $red;
+    }
+  }
+
+  &[data-route-verb="put"],
+  &[data-route-verb="patch"] {
+    span {
+      border-color: $purple;
+      color: $purple;
+    }
+  }
+}

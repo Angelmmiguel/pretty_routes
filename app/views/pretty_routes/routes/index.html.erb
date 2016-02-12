@@ -1,11 +1,13 @@
-<h2>
-  Routes by PrettyRoutes!
-</h2>
+<div class="wrap header">
+  <h2>Routes by PrettyRoutes!</h2>
 
-<p>
-  Routes match in priority from top to bottom
-</p>
+  <div class="search">
+    <input id="search-routes" placeholder="Search"/>
+  </div>
+</div>
 
-<%= render layout: "route_wrapper" do %>
-  <%= render partial: "route", collection: @routes %>
-<% end %>
+<div class="wrap">
+  <%= render layout: "route_wrapper" do %>
+    <%= render partial: "route", collection: @routes %>
+  <% end %>
+</div>
