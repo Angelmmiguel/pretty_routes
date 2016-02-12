@@ -18,7 +18,7 @@ $yellow:       #FFFF10;
 $dark_yellow:  #D1D115;
 
 // Others
-$bg:           $light_gray;
+$bg:           #F8F8F8;
 $rails_red:    #cc0000;
 $light_red:    #FFB5B5;
 $gray:         #999999;
@@ -28,7 +28,7 @@ $gray:         #999999;
  */
 
 body {
-  background-color: #FDFDFD;
+  background-color: $bg;
   color:            #333333;
 }
 
@@ -153,29 +153,29 @@ td.verb {
     font-weight: bold;
   }
 
-  &[data-route-verb="get"] {
+  &[data-value="get"] {
     span {
       border-color: $green;
       color: $green;
     }
   }
 
-  &[data-route-verb="post"] {
+  &[data-value="post"] {
     span {
       border-color: $blue;
       color: $blue;
     }
   }
 
-  &[data-route-verb="delete"] {
+  &[data-value="delete"] {
     span {
       border-color: $red;
       color: $red;
     }
   }
 
-  &[data-route-verb="put"],
-  &[data-route-verb="patch"] {
+  &[data-value="put"],
+  &[data-value="patch"] {
     span {
       border-color: $purple;
       color: $purple;

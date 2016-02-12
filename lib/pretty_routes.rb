@@ -14,7 +14,16 @@ module PrettyRoutes
 
   def self.format_routes(routes = all_routes)
     # ActionDispatch::Routing::RoutesInspector.new.collect_routes(_routes.routes)
-    ROUTE_INSPECTOR.send :collect_routes, routes
+    rails_routes = ROUTE_INSPECTOR.send :collect_routes, routes
+    # PArse rails routes to find constraints
+    rails_routes.each do |route|
+      next unless route[:reqs].include?(' {')
+      reqs = route[:reqs].split(' ')
+      route[:reqs] = reqs.first
+      route[:constraints] = reqs.last
+    end
+    # Return parsed
+    rails_routes
   end
 
   def self.all_routes

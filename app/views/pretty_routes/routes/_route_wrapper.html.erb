@@ -3,22 +3,25 @@
     <tr>
       <th>
         Helper (
-        <%= link_to "Path", "#", 'data-route-helper' => '_path',
-                    title: "Returns a relative path (without the http or domain)" %>
+        <%= link_to "Path", "#", data: { 'route-helper' => '_path' },
+                    title: "Returns a relative path (without the http or domain)",
+                    class: "path-helper" %>
         /
-        <%= link_to "Url", "#", 'data-route-helper' => '_url',
-                    title: "Returns an absolute url (with the http and domain)" %>
+        <%= link_to "Url", "#", data: { 'route-helper' => '_url' },
+                    title: "Returns an absolute url (with the http and domain)",
+                    class: "path-helper" %>
         )
       </th>
       <th>HTTP Verb</th>
       <th>Path</th>
       <th>Controller#Action</th>
+      <th>Constraints</th>
     </tr>
   </thead>
   <tbody>
     <%= yield %>
     <tr class="empty">
-      <td colspan="4"></td>
+      <td colspan="5"></td>
     </tr>
   </tbody>
 </table>

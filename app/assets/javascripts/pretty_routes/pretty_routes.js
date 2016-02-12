@@ -1,34 +1,21 @@
-function each(elems, func) {
-  if (!elems instanceof Array) { elems = [elems]; }
-  for (var i = elems.length; i--; ) {
-    func(elems[i]);
-  }
-}
-
-function setValOn(elems, val) {
-  each(elems, function(elem) {
-    elem.innerHTML = val;
-  });
-}
-
-function onClick(elems, func) {
-  each(elems, function(elem) {
-    elem.onclick = func;
-  });
-}
-
-// Enables functionality to toggle between `_path` and `_url` helper suffixes
-function setupRouteToggleHelperLinks() {
-  var toggleLinks = document.querySelectorAll('#route_table [data-route-helper]');
-  onClick(toggleLinks, function(){
-    var helperTxt   = this.getAttribute("data-route-helper");
-    var helperElems = document.querySelectorAll('[data-route-name] span.helper');
-    setValOn(helperElems, helperTxt);
-  });
-}
+// Globals
+var helper_suffix;
 
 $(document).ready(function(){
   $('#search-routes').focus();
+  helper_suffix = '_path';
+});
+
+$(document).on('click', '.path-helper', function(e) {
+  e.preventDefault();
+  var suffix = $(this).data('route-helper');
+
+  // Return, nothing todo here
+  if (helper_suffix === suffix) { return; }
+
+  // Update!
+  $('span.helper').html(suffix);
+  helper_suffix = suffix;
 });
 
 // Listener to search
@@ -37,7 +24,7 @@ $(document).on('input', '#search-routes', function(){
       value = $el.val(),
       found_count = 0;
 
-  if(value.length < 3) {
+  if(value.length < 2) {
     $('#route_table tbody tr').show();
     $('tr.empty').hide();
     $('span.highlight').each(function(){
@@ -53,15 +40,18 @@ $(document).on('input', '#search-routes', function(){
     $row.find('td').each(function(){
       var $col = $(this);
 
-      if (!$col.hasClass('verb')) {
-        var text = $col.html();
-        text = text.replace('<span class="highlight">', '');
-        text = text.replace('</span>', '');
+      if (!$col.hasClass('verb') && !$col.hasClass('constraints')) {
+        var text = $col.data('value');
 
         if(text.indexOf(value) > -1){
           text = text.replace(value, '<span class="highlight">' + value + '</span>');
           found = true;
         }
+
+        if($col.hasClass('helper') && text !== ''){
+          text = text + helper_suffix;
+        }
+
         // Add text
         $col.html(text);
       }
