@@ -1,5 +1,7 @@
 module PrettyRoutes
   class RoutesController < PrettyRoutes::ApplicationController
+    include PrettyRoutes::RoutesHelper
+
     layout 'pretty_routes/application'
 
     before_filter :require_local!

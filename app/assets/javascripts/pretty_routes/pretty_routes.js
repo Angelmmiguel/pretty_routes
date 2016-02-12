@@ -1,9 +1,11 @@
 // Globals
 var helper_suffix;
+var clip;
 
 $(document).ready(function(){
   $('#search-routes').focus();
   helper_suffix = '_path';
+  clip = new ZeroClipboard($(".clip-button"));
 });
 
 $(document).on('click', '.path-helper', function(e) {
@@ -50,10 +52,11 @@ $(document).on('input', '#search-routes', function(){
 
         if($col.hasClass('helper') && text !== ''){
           text = text + helper_suffix;
+          $col.find('.helper-alias').html(text)
+        } else {
+          // Add text
+          $col.html(text);
         }
-
-        // Add text
-        $col.html(text);
       }
 
     });
