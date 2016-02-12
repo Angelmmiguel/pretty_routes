@@ -10,13 +10,20 @@ $(document).ready(function(){
 
 $(document).on('click', '.path-helper', function(e) {
   e.preventDefault();
-  var suffix = $(this).data('route-helper');
+  var suffix = $(this).data('route-helper'),
+      clip = '';
 
   // Return, nothing todo here
   if (helper_suffix === suffix) { return; }
 
   // Update!
   $('span.helper').html(suffix);
+  // Update buttons
+
+  $('.clip-button').each(function(){
+    clip = $(this).attr('data-clipboard-text').replace(helper_suffix, suffix);
+    $(this).attr('data-clipboard-text', clip);
+  });
   helper_suffix = suffix;
 });
 
