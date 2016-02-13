@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.1.1] 13-02-2016
+
+* Fixed a typo error
+
 ## [0.1.0] 13-02-2016
 
 * Added a search box and highlight coincidences [#1](https://github.com/Angelmmiguel/pretty_routes/issues/1)
