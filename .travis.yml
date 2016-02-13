@@ -11,6 +11,9 @@ env:
   - "RAILS_VERSION=4.2.5"
   - "RAILS_VERSION=master"
 
+after_script:
+  - rubocop app lib
+
 matrix:
   allow_failures:
     - env: "RAILS_VERSION=master"
