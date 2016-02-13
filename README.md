@@ -1,6 +1,6 @@
 # PrettyRoutes [![Gem Version](https://badge.fury.io/rb/pretty_routes.svg)](https://badge.fury.io/rb/pretty_routes) [![Build Status](https://travis-ci.org/Angelmmiguel/pretty_routes.svg?branch=master)](https://travis-ci.org/Angelmmiguel/pretty_routes)
 
-Working with Rails routes won't be a nightmare. This is PrettyRoutes.
+Working with Rails routes won't be a nightmare. Welcome to PrettyRoutes ✌️.
 
 ## Install
 
@@ -17,6 +17,8 @@ Then run `bundle install` and you're ready to start
 ## Use
 
 Visit `/rails/routes` in your app and you'll see your routes. It's that simple.
+
+![Usage of Pretty Routes](https://cloud.githubusercontent.com/assets/4056725/13028455/96997842-d26f-11e5-8497-b8dd90df41f4.gif)
 
 ## About
 
