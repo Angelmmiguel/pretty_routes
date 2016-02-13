@@ -58,7 +58,7 @@ $(document).on('input', '#search-routes', function(){
         }
 
         if($col.hasClass('helper') && text !== ''){
-          text = text + helper_suffix;
+          text = text + '<span class="helper">' + helper_suffix + '</span>';
           $col.find('.helper-alias').html(text)
         } else {
           // Add text
