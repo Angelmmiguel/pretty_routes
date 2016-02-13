@@ -11,8 +11,9 @@ env:
   - "RAILS_VERSION=4.2.5"
   - "RAILS_VERSION=master"
 
-after_script:
-  - rubocop app lib
+script:
+  - bundle exec rake test
+  - rubocop app lib --fail-level R
 
 matrix:
   allow_failures:
