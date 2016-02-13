@@ -8,7 +8,7 @@ Add this to the development group in your `Gemfile`:
 
 ```ruby
 group :development do
-  gem 'pretty_routes'
+  gem 'pretty_routes', '~> 0.1.0'
 end
 ```
 
