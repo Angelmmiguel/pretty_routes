@@ -13,9 +13,9 @@ module PrettyRoutes
   end
 
   def self.format_routes(routes = all_routes)
-    # ActionDispatch::Routing::RoutesInspector.new.collect_routes(_routes.routes)
+    # Rails routes
     rails_routes = ROUTE_INSPECTOR.send :collect_routes, routes
-    # PArse rails routes to find constraints
+    # Parse rails routes to find constraints
     rails_routes.each do |route|
       next unless route[:reqs].include?(' {')
       reqs = route[:reqs].split(' ')
@@ -26,6 +26,8 @@ module PrettyRoutes
     rails_routes
   end
 
+  # Reload and return Rails routes.
+  #
   def self.all_routes
     Rails.application.reload_routes!
     Rails.application.routes.routes

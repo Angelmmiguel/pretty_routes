@@ -1,7 +1,13 @@
 module PrettyRoutes
+  #
+  # Route helper view
+  #
   module RoutesHelper
+    # rubocop:disable Metrics/MethodLength
     #
-    # Return the icon of the clipboard
+    # Icon of the clipboard
+    #
+    # @return [String] Data64 string with the image
     #
     def clipboard_icon
       'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACd'\
@@ -22,5 +28,6 @@ module PrettyRoutes
       'BYwAe5C6bWLBAnEBe5B0f+OzBeIAf/oZD0yBrAZ4HTLrd440QLykIi5dRnGjrn'\
       '0GqUVePHsndPGEuxvjLT7PvHbjDwgU+BVgN6iRAAAAAElFTkSuQmCC'
     end
+    # rubocop:enable Metrics/MethodLength
   end
 end

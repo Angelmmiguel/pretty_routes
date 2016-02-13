@@ -1,4 +1,7 @@
 module PrettyRoutes
+  #
+  # Route controller. It displays all routes in your application
+  #
   class RoutesController < PrettyRoutes::ApplicationController
     include PrettyRoutes::RoutesHelper
 

@@ -1,5 +1,5 @@
 Dummy::Application.routes.draw do
-  resources :foo
+  resources :foo, id: %r{([^\/])+?}
   resources :bar
 
   # mount_pretty_routes
