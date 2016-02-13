@@ -7,6 +7,9 @@ Dummy::Application.configure do
   # and recreated between test runs.  Don't rely on the data there!
   config.cache_classes = true
 
+  # Disable eager load
+  config.eager_load = false
+
   # Log error messages when you accidentally call methods on nil.
   config.whiny_nils = true
 
@@ -18,7 +21,7 @@ Dummy::Application.configure do
   config.action_dispatch.show_exceptions = false
 
   # Disable request forgery protection in test environment
-  config.action_controller.allow_forgery_protection    = false
+  config.action_controller.allow_forgery_protection = false
 
   # Tell Action Mailer not to deliver emails to the real world.
   # The :test delivery method accumulates sent emails in the
@@ -27,6 +30,14 @@ Dummy::Application.configure do
 
   # Test order
   config.active_support.test_order = :sorted
+
+  # Debug assets
+  config.assets.debug = true
+
+  # For old versions of ruby
+  config.secret_token =
+    'bedc31c5fff702ea808045bbbc5123455f1c00ecd005a1f667a5f04332100a6abf22cfce'\
+    'e2b3d39b8f677c03bb6503cf1c3b65c1287b9e13bd0d20c6431ec6ab'
 
   # Use SQL instead of Active Record's schema dumper when creating the test database.
   # This is necessary if your schema can't be completely dumped by the schema dumper,

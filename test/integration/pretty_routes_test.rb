@@ -1,11 +1,7 @@
 require 'test_helper'
 
+# Test Class
 class InheritNavigationTest < ActiveSupport::IntegrationCase
-
-  setup do
-    Capybara.current_driver = Capybara.javascript_driver
-  end
-
   test 'default index' do
     visit('/rails/routes')
     # save_and_open_page
@@ -20,5 +16,4 @@ class InheritNavigationTest < ActiveSupport::IntegrationCase
     click_link('Url')
     assert has_content?('foo_index_url')
   end
-
 end
