@@ -79,7 +79,7 @@ $(document).on('input', '#search-routes', function(){
 
   // Check if found_count
   if (found_count == 0) {
-    $('tr.empty td').html('There are not any coincidence for <b>' + value + '</b>');
+    $('tr.empty td').html('No match for <b>' + value + '</b>');
     $('tr.empty').show();
   } else {
     $('tr.empty').hide();
