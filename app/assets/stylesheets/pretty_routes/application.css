@@ -1,0 +1,160 @@
+/*
+ * General styles
+ */
+body {
+  background-color: #F8F8F8;
+  color: #333333;
+}
+
+body, p, ol, ul, td {
+  font-family: helvetica, arial, verdana, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+a,
+a:visited {
+  color: #333;
+}
+
+a:hover {
+  background-color: #333;
+  color: #FFF;
+}
+
+/*
+ * Grid styles
+ */
+.wrap {
+  min-width: 960px;
+  width: 75%;
+  margin: 20px auto;
+}
+
+/*
+ * Header styles
+ */
+.header {
+  margin: 35px auto 25px;
+}
+
+.header h2 {
+  color: #cc0000;
+  font-size: 2.3em;
+}
+
+/*
+ * Text style
+ */
+span.highlight {
+  display: inline-block;
+  background-color: #FFFF10;
+  border: 1px solid #D1D115;
+  border-radius: 2px;
+}
+
+#search-routes {
+  padding: 7px 15px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  border: 1px solid #d1d1d1;
+  min-width: 320px;
+}
+
+#search-routes:focus {
+  outline: none;
+  border: 1px solid #FFB5B5;
+}
+
+/*
+ * Table styles
+ */
+table.route_table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table.route_table th {
+  border-bottom: 1px solid #999;
+  padding: 7px 10px;
+  font-size: 1.2em;
+}
+
+table.route_table tbody tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+table.route_table tbody tr:nth-child(odd) {
+  background: #FFF;
+}
+
+table.route_table tbody tr:hover {
+  background-color: #d5d5d5;
+}
+
+table.route_table td {
+  padding: 7px 10px;
+}
+
+table.route_table .helper-alias {
+  display: inline-block;
+  margin-left: 4px;
+}
+
+table.route_table .clip-button {
+  border: 1px solid #ddd;
+  padding: 2px;
+  background-color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+table.route_table .clip-button img {
+  width: 10px;
+  height: 10px;
+}
+
+table.route_table td + td {
+  border-left: 1px solid #DDD;
+}
+
+table.route_table tr.empty {
+  background: white !important;
+  display: none;
+}
+
+table.route_table tr.empty td {
+  padding: 50px 0;
+  text-align: center;
+  font-size: 1.5em;
+  color: #999999;
+}
+
+td.verb span {
+  display: inline-block;
+  padding: 3px 4px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+td.verb[data-value="get"] span {
+  border-color: #27B04A;
+  color: #27B04A;
+}
+
+td.verb[data-value="post"] span {
+  border-color: #3788FF;
+  color: #3788FF;
+}
+
+td.verb[data-value="delete"] span {
+  border-color: #E45555;
+  color: #E45555;
+}
+
+td.verb[data-value="put"] span,
+td.verb[data-value="patch"] span {
+  border-color: #B689FF;
+  color: #B689FF;
+}

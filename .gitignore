@@ -8,3 +8,5 @@ test/dummy/tmp/
 .rvmrc
 Gemfile.lock
 *.gem
+*.scss
+

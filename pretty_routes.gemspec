@@ -21,7 +21,6 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency 'rails', '>= 3.2'
   gem.add_dependency 'zeroclipboard-rails', '~> 0.1.1'
-  gem.add_dependency 'sass-rails'
 
   gem.add_development_dependency 'capybara', '>= 0.4.0'
   gem.add_development_dependency 'launchy', '~> 2.1.0'
