@@ -4,7 +4,7 @@ Working with Rails routes won't be a nightmare. This is PrettyRoutes.
 
 ## Install
 
-Add this to the development group in your Gemfile:
+Add this to the development group in your `Gemfile`:
 
 ```ruby
 group :development do
