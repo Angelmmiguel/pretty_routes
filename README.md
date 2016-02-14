@@ -16,9 +16,9 @@ Then run `bundle install` and you're ready to start
 
 ## Use
 
-Visit `/rails/routes` in your app and you'll see your routes. It's that simple.
+Visit `/rails/routes` in your app and you'll see your routes:
 
-![Usage of Pretty Routes](https://cloud.githubusercontent.com/assets/4056725/13028455/96997842-d26f-11e5-8497-b8dd90df41f4.gif)
+![Usage of Pretty Routes](https://cloud.githubusercontent.com/assets/4056725/13034941/f604de60-d342-11e5-97ea-72a0dba560f4.gif)
 
 ## About
 
