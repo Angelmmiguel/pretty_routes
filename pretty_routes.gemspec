@@ -15,7 +15,8 @@ Gem::Specification.new do |gem|
   gem.homepage      = 'http://irb.rocks'
   gem.license       = 'MIT'
 
-  gem.files         = Dir['{app,lib}/**/*'] + %w(Rakefile LICENSE README.md)
+  gem.files         = Dir['{app,lib,config}/**/*'] +
+                      %w(Rakefile LICENSE README.md)
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
 
