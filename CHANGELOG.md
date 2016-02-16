@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.2.0] 16-02-2016
+
+* Added routes folder to gemspec [#8](https://github.com/Angelmmiguel/pretty_routes/issues/8)
+
 ## [0.1.1] 13-02-2016
 
 * Fixed a typo error
