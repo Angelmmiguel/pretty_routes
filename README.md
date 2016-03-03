@@ -1,4 +1,4 @@
-# PrettyRoutes [![Gem Version](https://badge.fury.io/rb/pretty_routes.svg)](https://badge.fury.io/rb/pretty_routes) [![Build Status](https://travis-ci.org/Angelmmiguel/pretty_routes.svg?branch=master)](https://travis-ci.org/Angelmmiguel/pretty_routes) [![Dependency Status](https://gemnasium.com/Angelmmiguel/pretty_routes.svg)](https://gemnasium.com/Angelmmiguel/pretty_routes)
+# PrettyRoutes [![Version](https://img.shields.io/gem/v/pretty_routes.svg?style=flat-square)](https://rubygems.org/gems/pretty_routes) [![Travis](https://img.shields.io/travis/Angelmmiguel/pretty_routes.svg?style=flat-square)](https://travis-ci.org/Angelmmiguel/pretty_routes) [![Dependency Status](https://gemnasium.com/Angelmmiguel/pretty_routes.svg)](https://gemnasium.com/Angelmmiguel/pretty_routes)
 
 Working with Rails routes won't be a nightmare. Welcome to PrettyRoutes ✌️.
 
